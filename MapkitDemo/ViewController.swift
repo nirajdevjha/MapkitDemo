@@ -89,8 +89,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         alertController.addAction(mutedStndardAction)
         
         if let popoverController = alertController.popoverPresentationController {
-            popoverController.sourceView = alertController.view
-            popoverController.sourceRect = alertController.view.bounds
+            popoverController.sourceView = view
+            popoverController.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 0, height: 0)
         }
        
         present(alertController, animated: true)
